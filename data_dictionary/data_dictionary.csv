@@ -1,0 +1,32 @@
+variable,type,description,units_or_scale,expected_values_or_notes,confidence
+especie,character,Species name.,text,In uploaded file only 'Concholepas concholepas'.,high
+tipo_parche,character,Patch type or patch-category code associated with the sample.,code,"Observed values: CL-CC, CL, CT. Exact biological meaning should be confirmed.",medium
+id,character,Sample identifier for each patch/capsule observation.,text,"Examples: CC062, CC062-Tar.",high
+categoria_talla_hembra,integer,Female size category.,mm class code,"Observed categories: 60, 80, 100, 120.",high
+temp_incubacion_procedencia_hembra,integer,Incubation temperature associated with female origin/provenance.,°C,"Observed values: 12, 14, 16.",medium
+temp_incubacion_parche,integer,Incubation temperature associated with the patch during experiment/measurement.,°C,"Observed values: 12, 14, 16.",medium
+estadio,character,Developmental stage.,category,"Observed values: Temprano, Tardio.",high
+n_capsulas_inicial,numeric,Initial number of capsules.,count,Missing in some rows.,medium
+n_capsulas_muertas_final,numeric,Final number of dead capsules.,count,Used together with mortality percentage.,medium
+porc_mortalidad_capsular,numeric,Capsule mortality percentage.,percent (0–100),Missing in many rows; likely only for relevant response type.,medium
+capsula,character,Capsule-response dataset or analysis type.,code,"Observed values: Emp_Inv, DispO2, Asinc.",high
+largo_mm,numeric,Capsule length.,mm,Used in regressions and volume approximation.,high
+ancho_promedio,numeric,Average capsule width.,mm,Used in volume approximation.,high
+area_capsula,numeric,Capsule area.,mm^2,Used to standardize embryo counts.,high
+disp_o2,numeric,Oxygen availability within capsule/patch.,percent air saturation (0–100 in raw file),Converted to 0–1 before beta regression in analysis.,high
+n_total_asinc,numeric,Total number of embryos evaluated for asynchrony.,count,Used with n_retrasadas_asinc.,high
+n_retrasadas_asinc,numeric,Number of delayed embryos in asynchrony assessment.,count,Used in quasibinomial model.,high
+porcentaje_asincronia,numeric,Percentage of developmental asynchrony.,percent (0–100),Relevant for capsula == 'Asinc'.,high
+embriones_totales,numeric,Estimated total number of embryos.,count,"Relevant for capsula == 'Emp_Inv'. Values may be image-derived estimates, not integers.",high
+inviables_totales,numeric,Estimated total number of non-viable embryos.,count,"Relevant for capsula == 'Emp_Inv'. Values may be image-derived estimates, not integers.",medium
+emb_estd_mm2,numeric,Standardized embryo density using area ^1.11,embryos per mm^2,Plotted as 'Number of embryos mm^-2 capsule area'.,high
+porc_inviables,numeric,Percentage of non-viable embryos.,percent (0–100),Converted to 0–1 before beta regression in analysis.,high
+id_compuesto,character,Composite unique identifier joining sample id and response type.,text,"Examples: CC062_Asinc, CC062_DispO2.",high
+volumen_capsula_mm3,derived numeric,Approximate capsule volume derived in regression script.,mm^3,Computed as pi * (ancho_promedio/2)^2 * largo_mm.,high
+embriones_por_volumen,derived numeric,Embryo density standardized by capsule volume.,embryos per mm^3,Derived in regression script.,high
+embriones_por_vol_estd,derived numeric,Alternative standardized embryo density using volume^0.74.,derived scale,Derived in regression script but not clearly used later.,medium
+no_retrasados,derived numeric,Number of non-delayed embryos.,count,Computed as n_total_asinc - n_retrasadas_asinc.,high
+grosor_cap,numeric,Capsule thickness.,mm,Present in df_capsule_thickness.rds.,high
+peso_area,numeric,Dry weight normalized by capsule area.,mg mm^-2,Present in df_dry_weight.rds; plotted as dry weight / capsule area.,high
+talla,character/integer,Female size category used in capsule thickness and dry-weight datasets.,mm class code,Likely same size categories as categoria_talla_hembra.,medium
+temperatura,integer,Experimental temperature in capsule thickness/dry-weight datasets.,°C,Used as predictor in linear models.,medium
