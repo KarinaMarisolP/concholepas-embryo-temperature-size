@@ -293,11 +293,6 @@ vol=ggplot(temp_a, aes(x = largo_mm, y = embriones_por_volumen )) +
 
 
 
-
-
-
-
-
 ragg::agg_tiff("Figure1.tiff", width = 19, height = 13,
                units = "cm", res = 300, pointsize = 10)
 
@@ -307,29 +302,6 @@ plot_grid(lin, pwr,estd, vol_pwr,vol , nrow = 2, ncol = 3,align = "hv",
 dev.off()
 
 
-
-
-
-#Segmented regression-----------------------------------------------------------------
-seg_reg <- segmented(
-  vol_reg,
-  seg.Z = ~ largo_mm,
-  psi = median(temp_a$largo_mm, na.rm = TRUE)
-)
-
-
-summary(seg_reg)
-
-plot(
-  embriones_por_volumen ~ largo_mm,
-  data = temp_a,
-  pch = 16
-)
-plot(seg_reg, add = TRUE, col = "blue", lwd = 2)
-abline(v = seg_reg$psi[, "Est."], lty = 2)
-
-
-anova(seg_reg, vol_reg)
 
 
 
