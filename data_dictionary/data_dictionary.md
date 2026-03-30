@@ -1,10 +1,10 @@
 
 ---
 
-# 📘 data_dictionary.md (basado en tu CSV + scripts)
+# data_dictionary.md 
 
 ```markdown
-# Data Dictionary – Concholepas embryo study
+# Data Dictionary – concholepas-embryo-temperature-size
 
 ## General structure
 
