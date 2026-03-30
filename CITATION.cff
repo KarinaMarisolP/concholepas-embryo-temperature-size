@@ -1,21 +1,14 @@
 cff-version: 1.2.0
 title: "The influence of temperature and body size on embryo packaging and developmental success of the exploited gastropod Concholepas concholepas"
-message: "If you use this repository, please cite it as follows:"
+message: "If you use this repository, please cite it as follows."
 type: software
+
 authors:
   - family-names: Perez-Pezoa
     given-names: Karina Marisol
     affiliation: Pontificia Universidad Católica de Chile
-  - family-names: [Agregar coautores]
-    given-names: [Nombres]
+
 version: 1.0.0
 date-released: 2026-03-29
-repository-code: https://github.com/KarinaMarisolP/concholepas-embryo-temperature-size
-doi: 10.5281/zenodo.19324577
-license: GPL-3.0 license
-keywords:
-  - marine ecology
-  - embryo development
-  - Concholepas
-  - image analysis
-  - beta regression
+repository-code: "https://github.com/KarinaMarisolP/concholepas-embryo-temperature-size"
+license: GPL-3.0
