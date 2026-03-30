@@ -10,7 +10,7 @@ This folder is reserved for lightweight documentation only.
 
 ## Important
 
-❗ Full datasets are NOT stored in this repository.
+Full datasets are NOT stored in this repository.
 
 They are archived externally (e.g., Zenodo) to:
 - ensure long-term preservation
@@ -21,7 +21,7 @@ They are archived externally (e.g., Zenodo) to:
 
 Full dataset available at:
 
-👉 [ADD ZENODO DOI HERE]
+[https://doi.org/10.5281/zenodo.19324577]
 
 ## Notes
 
