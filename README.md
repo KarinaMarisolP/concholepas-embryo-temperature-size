@@ -25,7 +25,7 @@ The project integrates:
 
 Full datasets are available in Zenodo:
 
-[ADD ZENODO DOI HERE]
+[(https://doi.org/10.5281/zenodo.19324577)]
 
 This repository does **not include full datasets** to keep it lightweight and ensure data integrity.
 
