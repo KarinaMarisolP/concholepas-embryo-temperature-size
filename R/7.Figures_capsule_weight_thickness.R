@@ -60,9 +60,9 @@ b = ggplot(df_dry_W, aes(x=talla, y=peso_area, fill=talla)) +
 
 
 
+#Figure 3
 
-
-ragg::agg_tiff("FigureX.tiff", width = 18, height = 10,
+ragg::agg_tiff("Figure3.tiff", width = 18, height = 10,
                units = "cm", res = 600, pointsize = 10)
 
 plot_grid(a , b, rel_widths = c(1, 1.05))
