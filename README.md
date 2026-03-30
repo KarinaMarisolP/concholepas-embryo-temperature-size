@@ -1,4 +1,4 @@
-# The influence of temperature and body size on embryo packaging and developmental success of the exploited gastropod *Concholepas concholepas*
+# The influence of temperature and body size on embryo packaging and developmental success of the exploited gastropod *Concholepas concholepas* [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19324778.svg)](https://doi.org/10.5281/zenodo.19324778)
 
 This repository contains scripts and workflows used to analyze embryo packing, oxygen availability, developmental asynchrony, and capsule traits in *Concholepas concholepas*.
 
@@ -25,7 +25,8 @@ The project integrates:
 
 Full datasets are available in Zenodo:
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19324778.svg)](https://doi.org/10.5281/zenodo.19324778)
+https://doi.org/10.5281/zenodo.19324577
+
 This repository does **not include full datasets** to keep it lightweight and ensure data integrity.
 
 ---
