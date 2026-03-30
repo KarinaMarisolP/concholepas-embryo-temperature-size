@@ -114,7 +114,7 @@ dev.off()
 
 
 #-------------------------------------------------------------------------------
-#Figure 3-------------------------------------------------------------------------------
+#Figure 4-------------------------------------------------------------------------------
 #Oxygen availability
 
 disp$estadio <- factor(
@@ -158,7 +158,7 @@ dev.off()
 
 
 #---------------------------------------------------------------------------------
-#Figure 4-----------------------------------------------------------------------
+#Figure 5-----------------------------------------------------------------------
 #Inviable embryo
 
 inv$estadio <- factor(
@@ -258,45 +258,6 @@ plot_grid(inv_1, inv_2,
 dev.off()
 
 #-------------------------------------------------------------------------------
-#Figure 5-----------------------------------------------------------------------
-#Asinchrony
-
-asinc$estadio <- factor(
-asinc$estadio,
-  levels = c("Temprano", "Tardio"),
-  labels = c("Early stage", "Late stage")
-)
-
-ragg::agg_tiff("Figure5.tiff", width = 14, height = 10,
-               units = "cm", res = 600, pointsize = 10)
-
-ggplot(asinc, aes(x=temp_incubacion_parche, y=porcentaje_asincronia, fill=estadio)) + 
-  geom_boxplot()+
-  stat_summary(fun = mean, geom = "point", aes(group = estadio),
-               position= position_dodge(width = 0.75) ,size = 1.5)+
-  labs(x=NULL, y=NULL) + 
-  theme_bw()+
-  theme(axis.text = element_text(family= NULL,size = 9, colour = "Black"),
-        axis.text.x=element_text(angle=0, hjust=0.5, vjust=0.5),
-        axis.title.y = element_text(family= NULL, size = 11, colour = "Black", face = "plain"),
-        axis.title.x = element_text(family= NULL, size = 11, colour = "Black", face = "plain", vjust=-2),
-        strip.text.x = element_text(family= NULL, color= 'black', size = 9, face="bold",  hjust = -0.001),
-        strip.text.y = element_text(family= NULL, color= 'black', size = 8, face="bold"),
-        strip.background = element_rect(fill = "white", color = "black"),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.border = element_rect(fill = NA, color = 'black'),
-        plot.margin = margin(t = 5, r = 10, b = 10, l = 5),
-        legend.title = element_text(size = 9, face = "plain"),
-        legend.text  = element_text(size = 8),
-        legend.key.size = unit(6, "mm"))+
-  scale_fill_manual(name = "Development \nstage",
-                    values= c("white", "grey30"))+
-#  facet_wrap( ~ estadio)+
-  ylab("Asynchrony (%)")+
-  xlab("Temperature (°C)")
-
-dev.off()
 
 
 
