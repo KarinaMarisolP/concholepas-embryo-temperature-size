@@ -12,6 +12,7 @@ The project integrates:
 
 ## Repository structure
 
+- `Images_for_test/`: Small set of images used to validate the embryo counting workflow
 - `R/`: Data cleaning, statistical analyses, and figure generation
 - `python/`: Image processing and embryo counting scripts
 - `imagej/`: Macro for preprocessing images
